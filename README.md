@@ -5,7 +5,7 @@ Getting Started
 To get started with the project, follow these steps:
 
 Clone the repository to your local machine:
-git clone https://github.com/your-username/your-project.git
+git clone gh repo clone Abhinav80555/Login-screen-Frontend
 
 Navigate to the project directory:
 cd your-project
