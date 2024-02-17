@@ -107,6 +107,7 @@ label,
   padding: 3% 5%;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 .man-img {
   display: none;
@@ -152,6 +153,7 @@ label,
   }
 
   .man-img {
+    display: block;
     position: fixed;
     bottom: 0;
     left: 0%;
