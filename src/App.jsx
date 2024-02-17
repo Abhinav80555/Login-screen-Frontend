@@ -1,6 +1,6 @@
 import "./App.css";
-import { AUTH_BG_IMG } from "./helpher/helpher";
-import { Route, Routes } from "react-router-dom";
+import { AUTH_BG_IMG, CASET, LOGO } from "./helpher/helpher";
+import { Link, Route, Routes } from "react-router-dom";
 import { LoginForm } from "./pages/LoginForm";
 import LoggedSucces from "./pages/LoggedSucces";
 
@@ -13,10 +13,18 @@ function App() {
         <div className="left-sub-container"></div>
         <div className="right-sub-container">
           <div className="form-container-card">
-            <Routes>
-              <Route path="/" element={<LoginForm />} />
-              <Route path="/logged" element={<LoggedSucces />} />
-            </Routes>
+            <div className="page-container">
+              <div className="mobile-caset-container">
+                <img src={CASET} alt="" className="caset-img" />
+              </div>
+              <Link style={{ display: "contents" }} to={"/"}>
+                <img src={LOGO} alt="" className="auth-logo" />
+              </Link>
+              <Routes>
+                <Route path="/" element={<LoginForm />} />
+                <Route path="/logged" element={<LoggedSucces />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </div>

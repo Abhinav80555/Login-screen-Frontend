@@ -1,26 +1,7 @@
-.login-page-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
 .login-form-container {
   padding: 0% 3.5% 0% 3.5%;
 }
-.auth-logo {
-  width: 50%;
-}
 
-.mobile-caset-container {
-  display: none;
-}
-.caset-img {
-  display: none;
-}
-
-.bg-color-circle {
-  display: none;
-}
 .form__group {
   position: relative;
   padding: 15px 0 0;
@@ -46,7 +27,7 @@
 }
 
 .form__field:placeholder-shown ~ .form__label {
-  font-size: 16px;
+  font-size: 14px;
   cursor: text;
   top: 20px;
 }
@@ -57,7 +38,7 @@ label,
   top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 12px;
+  font-size: 14px;
   color: #a9a9a9;
 }
 
@@ -99,55 +80,47 @@ label,
   font-size: 14px;
   margin: 0;
   line-height: 17.07px;
+  margin-top: 5px;
 }
 .primary-btn {
   background-color: var(--primary-color);
   color: #fff;
   width: 100%;
-  padding: 3% 5%;
+  padding: 2% 4%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid var(--primary-color);
+  transition: all 0.15s ease-in-out;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.5px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.primary-btn:hover {
+  background-color: rgb(243, 41, 108);
+  border: 2px solid rgb(243, 41, 108);
+  box-shadow: 0 0 10px rgba(243, 41, 108, 0.2);
+}
+
 .man-img {
   display: none;
 }
 
+.logged-message{
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
-  .auth-logo {
-    width: 50%;
-    margin-top: 15%;
-  }
-  .login-page-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-  }
-  .mobile-caset-container {
-    display: block;
-    position: relative;
-    width: 100%;
-  }
-
-  .caset-img {
-    display: block;
-    width: 32%;
-    position: absolute;
-    right: -30px;
-    top: 5vh;
-  }
-
-  .bg-color-circle {
-    display: block;
-    width: 80px;
-    height: 80px;
-    background-color: #cc3c6b;
-    border-radius: 50%;
-    position: absolute;
-    right: -35px;
-    top: 3vh;
-  }
-
   .auth-card-footer {
     position: static;
   }

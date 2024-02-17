@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles/form.css";
 import { CASET, LOGO, MAN } from "../helpher/helpher";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function LoginForm() {
   const navigate = useNavigate();
@@ -38,11 +38,8 @@ export function LoginForm() {
   };
 
   return (
-    <div className="login-page-container">
-      <div className="mobile-caset-container">
-        <img src={CASET} alt="" className="caset-img" />
-      </div>
-      <img src={LOGO} alt="" className="auth-logo" />
+    <>
+
       <div className="login-form-container">
         <h2 className="auth-card-header">
           Please login to <br />
@@ -79,9 +76,11 @@ export function LoginForm() {
             </label>
             <p className="validation-error-text">{passwordError}</p>
           </div>
-          <p className="text-nav-link" style={{ fontSize: "12px" }}>
-            Forgot password?
-          </p>
+          <Link style={{ display: "contents" }} to={"/"}>
+            <p className="text-nav-link" style={{ fontSize: "12px" }}>
+              Forgot password?
+            </p>
+          </Link>
           <button type="submit" className="primary-btn">
             Continue
           </button>
@@ -89,20 +88,23 @@ export function LoginForm() {
       </div>
       <p className="auth-card-footer">
         Don’t have an account?
-        <span
-          className="text-nav-link"
-          style={{
-            fontSize: "16px",
-            fontWeight: 500,
-            marginLeft: "5px",
-          }}
-        >
-          Sign up
-        </span>
+        <Link style={{ display: "contents" }} to={"/"}>
+          <span
+            className="text-nav-link"
+            style={{
+              fontSize: "16px",
+              fontWeight: 500,
+              marginLeft: "10px",
+              lineHeight: "19.5px",
+            }}
+          >
+            Sign up
+          </span>
+        </Link>
       </p>
       <div className="man-img-container">
         <img src={MAN} alt="" className="man-img" />
       </div>
-    </div>
+      </>
   );
 }
