@@ -10,8 +10,8 @@ function App() {
       <div className="app-container">
         <img src={AUTH_BG_IMG} alt="" className="auth-bg-img" />
 
-        <div style={{ width: "100%", height: "100vh" }}></div>
-        <div className="sub-container">
+        <div className="left-sub-container"></div>
+        <div className="right-sub-container">
           <div className="form-container-card">
             <Routes>
               <Route path="/" element={<LoginForm />} />

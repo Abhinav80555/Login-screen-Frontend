@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './styles/form.css'
 import { LOGO } from "../helpher/helpher";
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +40,7 @@ export function LoginForm() {
   return (
     <div style={{ position: "relative", height: "100%" }}>
       <img src={LOGO} alt="" className="auth-logo" />
-      <div style={{ padding: "0% 3.5% 0% 3.5%" }}>
+      <div  className="login-form-container">
         <h2 className="auth-card-header">
           Please login to <br />
           continue
