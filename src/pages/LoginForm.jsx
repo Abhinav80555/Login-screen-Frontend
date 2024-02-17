@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./styles/form.css";
-import { CASET, LOGO, MAN } from "../helpher/helpher";
+import { MAN } from "../helpher/helpher";
 import { Link, useNavigate } from "react-router-dom";
 
 export function LoginForm() {
@@ -39,7 +39,6 @@ export function LoginForm() {
 
   return (
     <>
-
       <div className="login-form-container">
         <h2 className="auth-card-header">
           Please login to <br />
@@ -76,8 +75,8 @@ export function LoginForm() {
             </label>
             <p className="validation-error-text">{passwordError}</p>
           </div>
-          <Link style={{ display: "contents" }} to={"/"}>
-            <p className="text-nav-link" style={{ fontSize: "12px" }}>
+          <Link style={{ display: "contents" }} to={"#"}>
+            <p className="text-nav-link" style={{ fontSize: "12px",lineHeight:'14.63px',marginTop:"20px"}}>
               Forgot password?
             </p>
           </Link>
@@ -88,7 +87,7 @@ export function LoginForm() {
       </div>
       <p className="auth-card-footer">
         Don’t have an account?
-        <Link style={{ display: "contents" }} to={"/"}>
+        <Link style={{ display: "contents" }} to={"#"}>
           <span
             className="text-nav-link"
             style={{
@@ -105,6 +104,6 @@ export function LoginForm() {
       <div className="man-img-container">
         <img src={MAN} alt="" className="man-img" />
       </div>
-      </>
+    </>
   );
 }

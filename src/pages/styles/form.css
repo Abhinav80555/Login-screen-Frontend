@@ -74,6 +74,10 @@ label,
   text-align: right;
   line-height: 14.63px;
 }
+
+.text-nav-link:hover {
+  color: #c00241;
+}
 .validation-error-text {
   color: #e51058;
   text-align: left;
