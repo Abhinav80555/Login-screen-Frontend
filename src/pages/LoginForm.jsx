@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { LOGO } from "../helpher/helpher";
+import { useNavigate } from "react-router-dom";
 
 export function LoginForm() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -23,21 +25,19 @@ export function LoginForm() {
     // Email validation regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Validate email
     if (!email.trim()) {
       setEmailError("Email is required");
     } else if (!emailPattern.test(email)) {
-      setEmailError("Invalid email format");
-    }
-
-    // Validate password
-    if (!password.trim()) {
+      setEmailError("Enter a valid email id");
+    } else if (!password.trim()) {
       setPasswordError("Password is required");
+    } else {
+      navigate("/logged");
     }
   };
 
   return (
-    <div style={{position:"relative",height:"100%"}}>
+    <div style={{ position: "relative", height: "100%" }}>
       <img src={LOGO} alt="" className="auth-logo" />
       <div style={{ padding: "0% 3.5% 0% 3.5%" }}>
         <h2 className="auth-card-header">
@@ -56,7 +56,7 @@ export function LoginForm() {
               onChange={handleEmailChange}
             />
             <label htmlFor="email" className="form__label">
-              Username
+              username
             </label>
             <p className="validation-error-text">{emailError}</p>
           </div>
@@ -71,7 +71,7 @@ export function LoginForm() {
               onChange={handlePasswordChange}
             />
             <label htmlFor="password" className="form__label">
-              Password
+              password
             </label>
             <p className="validation-error-text">{passwordError}</p>
           </div>
