@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./styles/form.css";
-import { CASET, LOGO } from "../helpher/helpher";
+import { CASET, LOGO, MAN } from "../helpher/helpher";
 import { useNavigate } from "react-router-dom";
 
 export function LoginForm() {
@@ -40,7 +40,6 @@ export function LoginForm() {
   return (
     <div className="login-page-container">
       <div className="mobile-caset-container">
-        <div className="bg-color-circle"></div>
         <img src={CASET} alt="" className="caset-img" />
       </div>
       <img src={LOGO} alt="" className="auth-logo" />
@@ -101,6 +100,9 @@ export function LoginForm() {
           Sign up
         </span>
       </p>
+      <div className="man-img-container">
+        <img src={MAN} alt="" className="man-img" />
+      </div>
     </div>
   );
 }

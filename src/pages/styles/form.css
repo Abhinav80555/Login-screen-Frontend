@@ -107,12 +107,18 @@ label,
   width: 100%;
   padding: 3% 5%;
 }
+.man-img {
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+}
 
 @media only screen and (max-width: 600px) {
-    .auth-logo {
-        width: 50%;
-        margin-top: 15%;
-      }
+  .auth-logo {
+    width: 50%;
+    margin-top: 15%;
+  }
   .login-page-container {
     position: relative;
     height: 100%;
@@ -128,7 +134,7 @@ label,
     display: block;
     width: 32%;
     position: absolute;
-    right: -20px;
+    right: -30px;
     top: 5.5vh;
   }
 
@@ -144,6 +150,6 @@ label,
   }
 
   .auth-card-footer {
-    position:static;
+    position: static;
   }
 }
