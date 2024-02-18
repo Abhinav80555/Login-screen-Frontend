@@ -32,11 +32,11 @@ export function LoginForm() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email.trim()) {
-      setEmailError("Email is required");
+      setEmailError("Email is required.");
     } else if (!emailPattern.test(email)) {
-      setEmailError("Enter a valid email id");
+      setEmailError("Enter a valid email id.");
     } else if (!password.trim()) {
-      setPasswordError("Password is required");
+      setPasswordError("Password is required.");
     } else {
       navigate("/logged");
     }
@@ -86,6 +86,7 @@ export function LoginForm() {
               fontSize: "12px",
               lineHeight: "14.63px",
               marginTop: "20px",
+              fontWeight:"500"
             }}
           >
             <Link

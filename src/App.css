@@ -38,6 +38,7 @@
   margin: 11% 0 0 17%;
   overflow: hidden;
   max-height: 600px;
+  min-height: 400px;
 }
 
 .page-container {

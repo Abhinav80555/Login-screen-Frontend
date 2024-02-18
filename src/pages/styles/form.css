@@ -62,6 +62,9 @@ label,
   align-items: center;
   text-align: center;
   width: 100%;
+  z-index: 1;
+  color: #000000;
+  font-weight: 400;
 }
 
 .auth-card-header {
@@ -70,16 +73,16 @@ label,
 }
 
 .text-nav-link {
-  color: #e51058;
+  color: var(--primary-color);
   text-align: right;
   line-height: 14.63px;
 }
 
 .text-nav-link:hover {
-  color: #c00241;
+  color: var(--primary-color-hover);
 }
 .validation-error-text {
-  color: #e51058;
+  color: var(--primary-color);
   text-align: left;
   font-size: 14px;
   margin: 0;
@@ -104,8 +107,8 @@ label,
 }
 
 .primary-btn:hover {
-  background-color: rgb(243, 41, 108);
-  border: 2px solid rgb(243, 41, 108);
+  background-color: var(--primary-color-hover);
+  border: 2px solid var(--primary-color-hover);
   box-shadow: 0 0 10px rgba(243, 41, 108, 0.2);
 }
 
@@ -126,7 +129,7 @@ label,
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap:2rem;
+  gap: 2rem;
 }
 
 /* Extra small devices (phones, 600px and down) */

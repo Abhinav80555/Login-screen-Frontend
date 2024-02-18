@@ -8,6 +8,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --primary-color: #e51058;
+  --primary-color-hover: #f3296c;
+
 }
 
 body {
