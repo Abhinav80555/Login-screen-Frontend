@@ -35,7 +35,7 @@ function App() {
               <Routes>
                 <Route
                   path="/"
-                  element={<LoginForm setIslogged={setIsLogged} />}
+                  element={<LoginForm setIsLogged={setIsLogged} />}
                 />
                 {isLogged && (
                   <Route path="/logged" element={<LoggedSucces />} />
