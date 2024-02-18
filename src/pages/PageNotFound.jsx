@@ -1,9 +1,12 @@
 import React from "react";
 import "./styles/form.css";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "../helpher/helpher";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
+  const title="Page Not Found";
+  Helmet(title)
   return (
     <>
       <div className="not-found-container">

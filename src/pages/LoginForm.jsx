@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles/form.css";
 import { MAN } from "../helpher/helpher";
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "../helpher/helpher";
 
 export function LoginForm() {
   const navigate = useNavigate();
@@ -9,6 +10,10 @@ export function LoginForm() {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const title ="Login"
+
+
+  Helmet(title);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -75,11 +80,22 @@ export function LoginForm() {
             </label>
             <p className="validation-error-text">{passwordError}</p>
           </div>
-          <Link style={{ display: "contents" }} to={"/forgot"}>
-            <p className="text-nav-link" style={{ fontSize: "12px",lineHeight:'14.63px',marginTop:"20px"}}>
+          <p
+            className="text-nav-link"
+            style={{
+              fontSize: "12px",
+              lineHeight: "14.63px",
+              marginTop: "20px",
+            }}
+          >
+            <Link
+              style={{ display: "contents", width: "max-contents" }}
+              to={"/forgot"}
+              className="text-nav-link"
+            >
               Forgot password?
-            </p>
-          </Link>
+            </Link>
+          </p>
           <button type="submit" className="primary-btn">
             Continue
           </button>
@@ -107,3 +123,4 @@ export function LoginForm() {
     </>
   );
 }
+
