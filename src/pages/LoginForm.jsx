@@ -75,7 +75,7 @@ export function LoginForm() {
             </label>
             <p className="validation-error-text">{passwordError}</p>
           </div>
-          <Link style={{ display: "contents" }} to={"#"}>
+          <Link style={{ display: "contents" }} to={"/forgot"}>
             <p className="text-nav-link" style={{ fontSize: "12px",lineHeight:'14.63px',marginTop:"20px"}}>
               Forgot password?
             </p>
@@ -87,7 +87,7 @@ export function LoginForm() {
       </div>
       <p className="auth-card-footer">
         Don’t have an account?
-        <Link style={{ display: "contents" }} to={"#"}>
+        <Link style={{ display: "contents" }} to={"/signup"}>
           <span
             className="text-nav-link"
             style={{

@@ -3,6 +3,7 @@ import { AUTH_BG_IMG, CASET, LOGO } from "./helpher/helpher";
 import { Link, Route, Routes } from "react-router-dom";
 import { LoginForm } from "./pages/LoginForm";
 import LoggedSucces from "./pages/LoggedSucces";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<LoginForm />} />
                 <Route path="/logged" element={<LoggedSucces />} />
+                <Route path="*" element={<PageNotFound/>} />
               </Routes>
             </div>
           </div>
