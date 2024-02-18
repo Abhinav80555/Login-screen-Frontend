@@ -1,9 +1,9 @@
 import React from "react";
-import "./styles/form.css";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "../helpher/helpher";
+import { Helmet } from "../../helpher/helpher";
+import "../login/login.css";
 
-const PageNotFound = () => {
+export const PageNotFound = () => {
   const navigate = useNavigate();
   const title = "Page Not Found";
   Helmet(title);
@@ -27,5 +27,3 @@ const PageNotFound = () => {
     </>
   );
 };
-
-export default PageNotFound;

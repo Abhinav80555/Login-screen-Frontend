@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles/form.css";
-import { Helmet } from "../helpher/helpher";
+import { Helmet } from "../../helpher/helpher";
+import '../login/login.css';
 
-const LoggedSucces = () => {
+export const LoginSuccess = () => {
   const title = "Logged In Successfully";
   Helmet(title);
   return (
@@ -15,4 +15,3 @@ const LoggedSucces = () => {
   );
 };
 
-export default LoggedSucces;

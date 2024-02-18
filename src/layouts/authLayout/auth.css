@@ -1,0 +1,134 @@
+.auth-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.app-container {
+  display: flex;
+}
+
+.left-sub-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.right-sub-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form-bg-card {
+  height: 65%;
+  width: 43%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(18, 18, 18, 0.15);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  margin: 11% 0 0 17%;
+  overflow: hidden;
+  max-height: 600px;
+  min-height: 400px;
+}
+
+.page-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.auth-logo {
+  width: 50%;
+}
+
+.caset-img-wrap {
+  display: none;
+}
+.caset-img {
+  display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .right-sub-container {
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+  .auth-bg-img {
+    display: none;
+  }
+  .left-sub-container {
+    display: none;
+  }
+  .right-sub-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .form-bg-card {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    overflow: hidden;
+    max-height: none;
+  }
+
+  .auth-logo {
+    width: 50%;
+    margin-top: 15%;
+  }
+  .login-page-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .caset-img-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .caset-img {
+    display: block;
+    width: 32%;
+    position: absolute;
+    right: -30px;
+    top: 5vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 768px) {
+  .form-bg-card {
+    height: 50%;
+    width: 80%;
+    margin: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-bg-card {
+    height: 50%;
+    width: 70%;
+    margin: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .form-bg-card {
+    height: 65%;
+    width: 55%;
+    margin: 12% 0 0 14%;
+  }
+}

@@ -11,9 +11,8 @@ export function Helmet(title) {
   useEffect(() => {
     document.title = `${title} | Paperflite`;
 
-    // Cleanup function to reset document title
     return () => {
       document.title = "Paperflite";
     };
-  }, [title]); // Depend on 'title' to update document title when 'title' changes
+  }, [title]);
 }

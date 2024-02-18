@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Helmet } from "../helpher/helpher";
-import { MAN } from "../helpher/helpher";
-import "./styles/form.css";
+import { Helmet, MAN } from "../../helpher/helpher";
+import './login.css';
+
 
 export function LoginForm({ setIsLogged }) {
   const navigate = useNavigate();
