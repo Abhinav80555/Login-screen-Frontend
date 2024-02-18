@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet, MAN } from "../../helpher/helpher";
-import './login.css';
-
+import "./login.css";
 
 export function LoginForm({ setIsLogged }) {
   const navigate = useNavigate();
@@ -24,18 +23,36 @@ export function LoginForm({ setIsLogged }) {
     setPasswordError("");
   };
 
+  const validateEmail = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.trim()) {
+      setEmailError("Email is required.");
+      return false;
+    } else if (!emailPattern.test(email)) {
+      setEmailError("Enter a valid email id.");
+      return false;
+    }
+    return true;
+  };
+
+  const validatePassword = () => {
+    if (!password.trim()) {
+      setPasswordError("Password is required.");
+      return false;
+    } else if (password.length < 8) {
+      setPasswordError("Password must be 8 characters long.");
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isEmailValid = validateEmail();
+    const isPasswordValid = validatePassword();
 
-    if (!email.trim()) {
-      setEmailError("Email is required.");
-    } else if (!emailPattern.test(email)) {
-      setEmailError("Enter a valid email id.");
-    } else if (!password.trim()) {
-      setPasswordError("Password is required.");
-    } else {
+    if (isEmailValid && isPasswordValid) {
       setIsLogged(true);
       setTimeout(() => {
         navigate("/logged");
@@ -62,7 +79,6 @@ export function LoginForm({ setIsLogged }) {
               autoComplete="off"
               value={email}
               onChange={handleEmailChange}
-              style={{marginTop:email.length>0&&"7px"}}
             />
             <label htmlFor="email" className="form__label">
               username

@@ -57,7 +57,8 @@
   display: none;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/*-- Responsive styles --*/
+
 @media only screen and (max-width: 600px) {
   .right-sub-container {
     max-height: 100dvh;
@@ -80,6 +81,14 @@
     margin: 0;
     overflow: hidden;
     max-height: none;
+    border-radius: none;
+    box-shadow: none;
+    background: none;
+    backdrop-filter: none;
+  }
+
+  .page-container {
+    max-height: 900px;
   }
 
   .auth-logo {
@@ -113,14 +122,21 @@
     width: 80%;
     margin: 0;
   }
+  .auth-bg-img {
+    object-fit: cover;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
+  
   .form-bg-card {
     height: 50%;
     width: 70%;
     margin: 0;
+  }
+  .auth-bg-img {
+    object-fit: cover;
   }
 }
 
