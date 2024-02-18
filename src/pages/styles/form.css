@@ -179,7 +179,7 @@ label,
 
 /* Small devices (which have low height ) */
 
-@media (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 720px) {
+@media (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 600px) {
   .man-img {
     display: block;
     position: static !important;
