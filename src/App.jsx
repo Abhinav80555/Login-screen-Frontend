@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState } from "react";
 import { AuthRoutes } from "./routes/AuthRoutes";
 
