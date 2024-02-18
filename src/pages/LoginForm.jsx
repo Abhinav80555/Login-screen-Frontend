@@ -56,11 +56,13 @@ export function LoginForm({ setIsLogged }) {
             <input
               type="email"
               id="email"
+              spellCheck={false}
               className="form__field"
               placeholder="Your Email"
               autoComplete="off"
               value={email}
               onChange={handleEmailChange}
+              style={{marginTop:email.length>0&&"7px"}}
             />
             <label htmlFor="email" className="form__label">
               username
@@ -71,6 +73,7 @@ export function LoginForm({ setIsLogged }) {
             <input
               type="password"
               id="password"
+              spellCheck={false}
               className="form__field"
               placeholder="Your password"
               autoComplete="off"
