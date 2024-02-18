@@ -1,17 +1,16 @@
-import { useState } from "react";
-import "./styles/form.css";
-import { MAN } from "../helpher/helpher";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "../helpher/helpher";
+import { MAN } from "../helpher/helpher";
+import "./styles/form.css";
 
-export function LoginForm() {
+export function LoginForm({ setIsLogged }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const title ="Login"
-
+  const title = "Login";
 
   Helmet(title);
 
@@ -28,7 +27,6 @@ export function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Email validation regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email.trim()) {
@@ -38,7 +36,10 @@ export function LoginForm() {
     } else if (!password.trim()) {
       setPasswordError("Password is required.");
     } else {
-      navigate("/logged");
+      setIsLogged(true);
+      setTimeout(() => {
+        navigate("/logged");
+      }, 100);
     }
   };
 
@@ -50,6 +51,7 @@ export function LoginForm() {
           continue
         </h2>
         <form noValidate onSubmit={handleSubmit}>
+          {/*----------------------- Input fields -------------------------*/}
           <div className="form__group">
             <input
               type="email"
@@ -80,15 +82,9 @@ export function LoginForm() {
             </label>
             <p className="validation-error-text">{passwordError}</p>
           </div>
-          <p
-            className="text-nav-link"
-            style={{
-              fontSize: "12px",
-              lineHeight: "14.63px",
-              marginTop: "20px",
-              fontWeight:"500"
-            }}
-          >
+
+          {/*----------------------- Forgot password link -------------------------*/}
+          <p className="text-nav-link f-12 forgot-text">
             <Link
               style={{ display: "contents", width: "max-contents" }}
               to={"/forgot"}
@@ -97,31 +93,25 @@ export function LoginForm() {
               Forgot password?
             </Link>
           </p>
+
+          {/*----------------------- Submit button -------------------------*/}
+
           <button type="submit" className="primary-btn">
             Continue
           </button>
         </form>
       </div>
+
+      {/*----------------------- footer contains signup link -------------------------*/}
       <p className="auth-card-footer">
         Don’t have an account?
         <Link style={{ display: "contents" }} to={"/signup"}>
-          <span
-            className="text-nav-link"
-            style={{
-              fontSize: "16px",
-              fontWeight: 500,
-              marginLeft: "10px",
-              lineHeight: "19.5px",
-            }}
-          >
-            Sign up
-          </span>
+          <span className="text-nav-link f-16 signup-text">Sign up</span>
         </Link>
       </p>
       <div className="man-img-container">
-        <img src={MAN} alt="" className="man-img" />
+        <img src={MAN} alt="man-img" className="man-img" />
       </div>
     </>
   );
 }
-

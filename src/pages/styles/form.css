@@ -1,6 +1,10 @@
+/*------------------ Base styles ----------------------*/
+
 .login-form-container {
   padding: 0% 3.5% 0% 3.5%;
 }
+
+/*------------------ Input styles start----------------------*/
 
 .form__group {
   position: relative;
@@ -51,6 +55,19 @@ label,
   border-bottom: 2px solid #717274;
 }
 
+/*------------------ Input styles End----------------------*/
+.forgot-text {
+  line-height: 14.63px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.signup-text {
+  font-weight: 500;
+  margin-left: 10px;
+  line-height: 19.5px;
+}
+
 .auth-card-footer {
   text-align: center;
   line-height: 17.07px;
@@ -81,6 +98,7 @@ label,
 .text-nav-link:hover {
   color: var(--primary-color-hover);
 }
+
 .validation-error-text {
   color: var(--primary-color);
   text-align: left;
@@ -89,6 +107,8 @@ label,
   line-height: 17.07px;
   margin-top: 5px;
 }
+
+/*------------------ Primary Button styles start----------------------*/
 .primary-btn {
   background-color: var(--primary-color);
   color: #fff;
@@ -112,6 +132,8 @@ label,
   box-shadow: 0 0 10px rgba(243, 41, 108, 0.2);
 }
 
+/*------------------ Primary Button styles End----------------------*/
+
 .man-img {
   display: none;
 }
@@ -131,6 +153,8 @@ label,
   flex-direction: column;
   gap: 2rem;
 }
+
+/*------------------ Responsive styles ----------------------*/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

@@ -5,13 +5,13 @@ import { Helmet } from "../helpher/helpher";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
-  const title="Page Not Found";
-  Helmet(title)
+  const title = "Page Not Found";
+  Helmet(title);
   return (
     <>
       <div className="not-found-container">
         <p className="logged-message">
-          <span style={{fontSize:"20px",fontWeight:"600",}}>404</span>
+          <span style={{ fontSize: "20px", fontWeight: "600" }}>404</span>
           <br />
           Oops ! page not found.
         </p>
