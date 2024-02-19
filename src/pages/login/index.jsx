@@ -9,6 +9,8 @@ export function LoginForm({ setIsLogged }) {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const staticEmail = "example@paperflite.com";
+  const staticPassword = "12345";
   const title = "Login";
 
   Helmet(title);
@@ -39,9 +41,6 @@ export function LoginForm({ setIsLogged }) {
     if (!password.trim()) {
       setPasswordError("Password is required.");
       return false;
-    } else if (password.length < 8) {
-      setPasswordError("Password must be 8 characters long.");
-      return false;
     }
     return true;
   };
@@ -51,12 +50,15 @@ export function LoginForm({ setIsLogged }) {
 
     const isEmailValid = validateEmail();
     const isPasswordValid = validatePassword();
-
     if (isEmailValid && isPasswordValid) {
-      setIsLogged(true);
-      setTimeout(() => {
-        navigate("/logged");
-      }, 100);
+      if (email === staticEmail && password === staticPassword) {
+        setIsLogged(true);
+        setTimeout(() => {
+          navigate("/logged");
+        }, 100);
+      } else {
+        setPasswordError("Incorrect email or password.");
+      }
     }
   };
 

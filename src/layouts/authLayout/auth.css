@@ -117,26 +117,67 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 600px) and (max-width: 768px) {
-  .form-bg-card {
-    height: 50%;
-    width: 80%;
-    margin: 0;
+  .right-sub-container {
+    max-height: 100dvh;
+    overflow: hidden;
   }
   .auth-bg-img {
-    object-fit: cover;
+    display: none;
+  }
+  .left-sub-container {
+    display: none;
+  }
+  .right-sub-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .form-bg-card {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    overflow: hidden;
+    max-height: none;
+    border-radius: none;
+    box-shadow: none;
+    background: none;
+    backdrop-filter: none;
+  }
+
+  .page-container {
+    max-height: 900px;
+  }
+
+  .auth-logo {
+    width: 50%;
+    margin-top: 15%;
+  }
+  .login-page-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .caset-img-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .caset-img {
+    display: block;
+    width: 32%;
+    position: absolute;
+    right: -30px;
+    top: 5vh;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) {
-  
+@media (min-width: 769px) and (max-width: 991px) {
   .form-bg-card {
     height: 50%;
     width: 70%;
     margin: 0;
-  }
-  .auth-bg-img {
-    object-fit: cover;
   }
 }
 
