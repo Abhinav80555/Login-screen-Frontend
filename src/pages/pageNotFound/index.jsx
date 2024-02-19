@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "../../helpher/helpher";
 import "../login/login.css";
+import { Helmet } from "../../helper/helper";
 
 export const PageNotFound = () => {
   const navigate = useNavigate();

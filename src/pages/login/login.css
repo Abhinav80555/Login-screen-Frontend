@@ -55,8 +55,6 @@ label,
   color: #717274;
 }
 
-
-
 .forgot-text {
   line-height: 14.63px;
   margin-top: 20px;
@@ -172,8 +170,6 @@ label,
   }
 }
 
-
-
 @media (min-width: 600px) and (max-width: 768px) {
   .auth-card-footer {
     position: static;
@@ -191,6 +187,12 @@ label,
 }
 
 @media (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 600px) {
+  .man-img {
+    display: block;
+    position: static !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) and (min-height: 0px) and (max-height: 1024px) {
   .man-img {
     display: block;
     position: static !important;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Helmet, MAN } from "../../helpher/helpher";
+import { Helmet, MAN } from "../../helper/helper";
 import "./login.css";
 
 export function LoginForm({ setIsLogged }) {
@@ -9,8 +9,8 @@ export function LoginForm({ setIsLogged }) {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const staticEmail = "example@paperflite.com";
-  const staticPassword = "12345";
+  const staticEmail = "test@paperflite.com";
+  const staticPassword = "12345678";
   const title = "Login";
 
   Helmet(title);
@@ -70,7 +70,6 @@ export function LoginForm({ setIsLogged }) {
           continue
         </h2>
         <form noValidate onSubmit={handleSubmit}>
-          {/*----------------------- Input fields -------------------------*/}
           <div className="form__group">
             <input
               type="email"
@@ -104,7 +103,6 @@ export function LoginForm({ setIsLogged }) {
             <p className="validation-error-text">{passwordError}</p>
           </div>
 
-          {/*----------------------- Forgot password link -------------------------*/}
           <p className="text-nav-link f-12 forgot-text">
             <Link
               style={{ display: "contents", width: "max-contents" }}
@@ -115,21 +113,19 @@ export function LoginForm({ setIsLogged }) {
             </Link>
           </p>
 
-          {/*----------------------- Submit button -------------------------*/}
-
           <button type="submit" className="primary-btn">
             Continue
           </button>
         </form>
       </div>
 
-      {/*----------------------- footer contains signup link -------------------------*/}
       <p className="auth-card-footer">
         Don’t have an account?
         <Link style={{ display: "contents" }} to={"/signup"}>
           <span className="text-nav-link f-16 signup-text">Sign up</span>
         </Link>
       </p>
+
       <div className="man-img-container">
         <img src={MAN} alt="man-img" className="man-img" />
       </div>

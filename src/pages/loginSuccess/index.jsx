@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from "../../helpher/helpher";
 import '../login/login.css';
+import { Helmet } from "../../helper/helper";
 
 export const LoginSuccess = () => {
   const title = "Logged In Successfully";

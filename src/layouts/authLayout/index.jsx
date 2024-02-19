@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import { AUTH_BG_IMG, CASET, LOGO } from "../../helpher/helpher";
 import "./auth.css";
+import { AUTH_BG_IMG, CASET, LOGO } from "../../helper/helper";
 
 export function AuthLayout() {
   return (
